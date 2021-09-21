@@ -5,8 +5,9 @@ const typewriter = function(sentence, time) {
     setTimeout(() => {
       if (char == sentence.length - 1) {
         process.stdout.write(sentence[char] + '\n');
+      } else {
+        process.stdout.write(sentence[char]);
       }
-      process.stdout.write(sentence[char]);
     }, time)
     time += 50;
   }
